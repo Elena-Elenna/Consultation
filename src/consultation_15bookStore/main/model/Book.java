@@ -8,12 +8,23 @@ public class Book {
     private double price;
     private int year;
 
+    User borrower;
+
     public Book(String title, String author, double price, int year) {
         this.id = counter++;
         this.title = title;
         this.author = author;
         this.price = price;
         this.year = year;
+//        this.borrower = null;
+    }
+
+    public User getBorrower() {
+        return borrower;
+    }
+
+    public void setBorrower(User borrower) {
+        this.borrower = borrower;
     }
 
     public String getTitle() {
